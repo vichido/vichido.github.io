@@ -1,35 +1,76 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/buttons/buttons.css">
+    
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://localhost:44301/Content/css/components/buttons/buttons.css">
+    -->
     <link href="css/prism.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
-    <h1>Built with Classes</h1>
-    <a href="#" class="sc-btn sc-btn--size-lg sc-btn--bg-cyan sc-btn--txt-white">hello </a>
-    <pre>
-    <code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn--size-lg sc-btn--bg-cyan sc-btn--txt-white&quot;&gt;hello &lt;/a&gt;</code>
-    </pre>
+    <style>
+    body { 
+        font-family: 'Open Sans', sans-serif;
+    }
+    pre {
+        margin-bottom: 50px!important;    
+    }
+    </style>
 
-    <a href="#" class="sc-btn sc-btn--size-md sc-btn--bg-cyan sc-btn--txt-white">hello </a>
-    <pre>
-    <code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn--size-md sc-btn--bg-cyan sc-btn--txt-white&quot;&gt;hello &lt;/a&gt;</code>
-    </pre>
+    <h1>Building buttons:</h1>    
+    <p>Add size, text-color, background-color, etc...</p>
+    <p>"sc-btn" + "sc-btn--size-[sm,md,lg]" + "sc-btn--txt-[white,black,etc]" + "sc-btn--bg-[cyan,white,etc]"</p>
+    <hr>
+    <p>
+    <a href="#" class="sc-btn sc-btn--size-lg sc-btn--bg-cyan sc-btn--txt-white">my button</a>
+<pre>
+<code class="language-html" >&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn--size-lg sc-btn--bg-cyan sc-btn--txt-white&quot;&gt;
+  my button 
+&lt;/a&gt;</code>
+</pre>
+    </p>
 
-    <a href="#" class="sc-btn sc-btn--size-sm sc-btn--bg-cyan sc-btn--txt-white">hello </a>
+    <p>
+        <a href="#" class="sc-btn sc-btn--size-md sc-btn--bg-gray sc-btn--txt-black">my button</a>
+<pre>
+<code class="language-html">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn--size-md sc-btn--bg-cyan sc-btn--txt-white&quot;&gt;
+  my button
+&lt;/a&gt;</code>
+</pre>
+    </p>
 
-    <pre>
-    <code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn--size-sm sc-btn--bg-cyan sc-btn--txt-white&quot;&gt;hello &lt;/a&gt;</code>
-    </pre>
+    <p>
+        <a href="#" class="sc-btn sc-btn--size-sm sc-btn--bg-trans sc-btn--txt-black sc-btn--bdr-gray">hello </a>
+<pre>
+<code class="language-html">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn--size-sm sc-btn--bg-trans sc-btn--txt-black sc-btn--bdr-gray&quot;&gt;
+  my button
+&lt;/a&gt;</code>
+</pre>
+    </p>
 
 
-    <h1>Predefined Components</h1>
-    <a href="#" class="sc-btn-primary">hello </a>
-
-    <pre>
-    <code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn-primary&quot;&gt;hello &lt;/a&gt;</code>
-    </pre>
+    <h1>Predefined Buttons</h1>
+    <p>
+        <h3>Filled button</h3>
+        <a href="#" class="sc-btn-filled">filled button </a>
+<pre>
+<code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn-filled&quot;&gt;
+  filled button    
+&lt;/a&gt;</code>
+</pre>
+    </p>
+    <p>
+        <h3>Ghost button</h3>
+        <a href="#" class="sc-btn-ghost">ghost button </a>
+<pre>
+<code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn-ghost&quot;&gt;
+  ghost button
+&lt;/a&gt;</code>
+</pre>
+    </p>
 
 
     <script src="js/prism.js"></script>
