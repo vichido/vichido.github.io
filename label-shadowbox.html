@@ -1,0 +1,281 @@
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/buttons.css">
+    
+    <!-- 
+    <link rel="stylesheet" type="text/css" href="https://localhost:44301/Content/css/components/buttons.css">
+   -->
+    <link href="css/prism.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <style>
+    body { 
+        font-family: 'Open Sans', sans-serif;
+        color: #565a5c;
+        background:#f9f9f9;
+    }
+    h3 {
+        font: 24px/120% "Open Sans", Helvetica, Arial, sans-serif;
+        font-weight: 300;   
+    }
+    pre {
+        margin-top: 20px!important;
+        margin-bottom: 50px!important; 
+        min-width: 708px;
+        width: 50%;  
+    }
+    </style>
+
+
+
+
+
+<style>
+.sc-label-shadowbox-wrap {
+	-webkit-display: flex;
+	        display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width:100%;
+}
+@media screen and (min-width:768px){
+	.sc-label-shadowbox-wrap {
+		flex-direction: row;
+		margin:0 auto;
+		width:708px;
+	}
+}
+
+.sc-label-shadowbox {
+	background:#fff;
+	color:#000;
+	-wekbit-display: flex;
+	        display: flex;
+	flex-direction: row;
+	margin: 0 0 10px 0;
+	position: relative;
+	width: 100%;
+}
+
+.sc-label-shadowbox::before {
+    background-color: transparent;
+    bottom: 0;
+    -webkit-box-shadow:0 -4px 50px 0 rgba(0, 0, 0, 0.5);
+       -moz-box-shadow: 0 -4px 50px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 -4px 50px 0 rgba(0, 0, 0, 0.5);
+    content: '';
+    height: 50%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 80%;
+    z-index: -1;
+}
+
+.sc-label-shadowbox::after {
+    /*background-color: #fff;*/
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+@media screen and (min-width:768px){
+	.sc-label-shadowbox {
+		flex-direction: column;
+		margin: 0;
+		max-width: 223px;
+	}
+}
+
+.sc-label-shadowbox-hdr {
+	align-content: center;
+	box-sizing: border-box;
+	-webkit-display: flex;
+	        display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+@media screen and (max-width:767px){
+	.sc-label-shadowbox-hdr {
+		min-height: 120px;
+		min-width: 120px;
+		width: 120px;
+	}
+}
+
+
+.sc-label-shadowbox-title {
+	display: block;
+	font-size: 16px;
+	font-weight:400;
+	letter-spacing: .03em;
+	line-height:140%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.sc-label-shadowbox-callout {
+	display: block;
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 100%;
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+	width: 100%;
+}
+.sc-label-shadowbox-callout sup {
+	font-size: 22px;
+	font-weight: 300;
+	position: relative;
+	top: 2px;
+}
+@media screen and (min-width:768px){
+	.sc-label-shadowbox-hdr {
+		padding: 30px 15px;
+		width: 100%;
+	}
+	.sc-label-shadowbox-callout {
+		font-size: 48px;
+		margin: 5px 0 0;
+	}
+	.sc-label-shadowbox-callout sup {
+		line-height: 140%;
+		top: -2px;
+	}
+}
+
+.sc-label-shadowbox-summary {
+	padding: 15px;
+	text-align: left;
+}
+@media screen and (min-width:768px){
+	.sc-label-shadowbox-summary {
+		padding: 30px 15px;
+		text-align: center;
+	}
+}
+
+.sc-label-shadowbox-summary ul,
+.sc-label-shadowbox-summary ul li {
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+
+.sc-label-shadowbox-summary p {
+	margin:0 0 20px;
+}
+
+.sc-label-shadowbox-summary p:last-child {
+	margin-bottom:0;
+}
+
+
+/* Colors */
+.sc-bg--tangerine {
+    background: #f88101;
+}
+.sc-bg--green-lt {
+	background: #50e3c2; 
+}
+
+
+.sc-label-shadowbox-bg--blue-dk:after {
+    background: #286592;
+}
+.sc-label-shadowbox-bg--cyan:after {
+    background: #00baf2;
+}
+.sc-label-shadowbox-bg--cyan-hvr:after {
+    background: #4ccef5;
+}
+.sc-label-shadowbox-bg--gray:after { 
+    background-color: #ccc; 
+}
+.sc-label-shadowbox-bg--gray-lt:after {
+    background: #f9f9f9;
+}
+.sc-label-shadowbox-bg--white:after {
+    background: white;
+}
+.sc-label-shadowbox-bg--tangerine:after {
+    background: #f88101;
+}
+.sc-label-shadowbox-bg--green-lt:after {
+	background: #50e3c2; 
+}
+
+
+.sc-label-shadowbox.sc-txt--black {color:#565a5c;}
+.sc-label-shadowbox.sc-txt--white {color:#fff;}
+.sc-label-shadowbox.sc-txt--cyan {color:#00baf2;}
+.sc-label-shadowbox.sc-txt--gray {color:#ccc;}
+</style>
+
+<!-- Begin: Pricing Cards -->
+<div class="sc-label-shadowbox-wrap">
+
+	<div class="sc-label-shadowbox sc-label-shadowbox-bg--white sc-txt--black">
+		<div class="sc-label-shadowbox-hdr sc-bg--tangerine sc-txt--white">
+			<span class="sc-label-shadowbox-title">Physician</span>
+			<span class="sc-label-shadowbox-callout"><sup>$</sup>44</span>
+		</div>
+		<div class="sc-label-shadowbox-summary">
+			<ul>
+				<li>Allergies</li>
+				<li>Cold</li>
+				<li>Flu</li>
+				<li>Infections</li>
+				<li>Rash</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sc-label-shadowbox sc-label-shadowbox-bg--white sc-txt--cyan">
+		<div class="sc-label-shadowbox-hdr sc-bg--green-lt sc-txt--black">
+			<span class="sc-label-shadowbox-title">Frames &amp; lenses</span>
+			<span class="sc-label-shadowbox-callout">5<sup>%</sup> off</span>
+		</div>
+		<div class="sc-label-shadowbox-summary">
+			<ul>
+				<li>All frames</li>
+				<li>New lenses</li>
+				<li>HSA/FSA accepted</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sc-label-shadowbox sc-label-shadowbox-bg--gray sc-txt--black">
+		<div class="sc-label-shadowbox-hdr sc-bg--blue-dk sc-txt--white">
+			<span class="sc-label-shadowbox-title">Title</span>
+			<span class="sc-label-shadowbox-callout">Callout</span>
+		</div>
+		<div class="sc-label-shadowbox-summary">
+			<p>Summary Text Here. Phasellus vitae sollicitudin mi.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+	</div>
+
+</div>
+<!-- End: Pricing Cards -->
+
+
+
+    <script src="js/prism.js"></script>
+</body>
+
+</html>
