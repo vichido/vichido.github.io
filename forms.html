@@ -10,104 +10,122 @@
 <body>
 
     <style>
-    body { 
-        font-family: 'Open Sans', sans-serif;
-        color: #565a5c;
-    }
-    h3 {
-        font: 24px/120% "Open Sans", Helvetica, Arial, sans-serif;
-        font-weight: 300;  
-    }
-    pre {
-        margin-top: 20px!important;
-        margin-bottom: 50px!important; 
-        min-width: 708px;
-        width: 50%;  
-    }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #565a5c;
+        }
+
+        h3 {
+            font: 24px/120% "Open Sans", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        pre {
+            margin-top: 20px !important;
+            margin-bottom: 50px !important;
+            min-width: 708px;
+            width: 50%;
+        }
     </style>
 
     <h3>General form</h3>
     <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
         <div class="sc-form">
-
             <!-- Input Text -->
             <label class="sc-form__label">Email</label>
             <input class="sc-form__text" type="text" name="email" placeholder="john@singlecare">
+        </div>
+    </div>
 
-            <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__label&quot;&gt;Email&lt;/label&gt;
-&lt;input class=&quot;sc-form__text&quot; type=&quot;text&quot; name=&quot;email&quot; placeholder=&quot;john@singlecare&quot;&gt;</code></pre>
 
-            <br><br>
-
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <div class="sc-form">
             <!-- Textarea -->
             <label class="sc-form__label">Add a comment</label>
             <textarea class="sc-form__textarea" placeholder="Your question or comment"></textarea>
+        </div>
+    </div>
 
-            <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__label&quot;&gt;Add a comment&lt;/label&gt;
-&lt;textarea class=&quot;sc-form__textarea&quot; placeholder=&quot;Your question or comment&quot;&gt;&lt;/textarea&gt;</code></pre>
+    <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__label&quot;&gt;Email&lt;/label&gt;
+&lt;input class=&quot;sc-form__text&quot; 
+       type=&quot;text&quot; 
+       name=&quot;email&quot; 
+       placeholder=&quot;john@singlecare&quot;&gt;
 
-            <br><br>
+&lt;label class=&quot;sc-form__label&quot;&gt;Add a comment&lt;/label&gt;
+&lt;textarea class=&quot;sc-form__textarea&quot; 
+          placeholder=&quot;Your question or comment&quot;&gt;&lt;/textarea&gt;</code></pre>
 
+
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <div class="sc-form">
             <!-- Select Menus -->
-            <label class="sc-form__label">Select</label>
-            <br>
+            <label class="sc-form__label">Select</label> <br>
             <select class="sc-form__select">
                 <option value="">Option 1</option>
                 <option value="">Option 2</option>
                 <option value="">Option 3</option>
             </select>
+        </div>
+    </div>
 
-            <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__label&quot;&gt;Select&lt;/label&gt;
-
+    <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__label&quot;&gt;Select&lt;/label&gt;
 &lt;select class=&quot;sc-form__select&quot;&gt;
     &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
     &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
     &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
 &lt;/select&gt;</code></pre>
 
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <div class="sc-form">
             <label class="sc-form__label">Select [disabled]</label>
             <br>
             <select class="sc-form__select" disabled>
                 <option value="">Option 1</option>
                 <option value="">Option 2</option>
                 <option value="">Option 3</option>
-            </select>            
-
-            <pre><code class="language-html" style="height:50px;">&lt;select class=&quot;sc-form__select&quot; disabled&gt;
+            </select>
+        </div>
+    </div>
+    <pre><code class="language-html" style="height:50px;">&lt;select class=&quot;sc-form__select&quot; disabled&gt;
     &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
     &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
     &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
 &lt;/select&gt;</code></pre>
 
-            <br><br>
+
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <div class="sc-form">
 
             <!-- Form buttons -->
             <input type="submit" value="form input submit" class="sc-btn sc-btn-filled" />
             <input type="button" value="form input button" class="sc-btn sc-btn-ghost" />
-            <button type="button" class="sc-btn sc-btn-shadow">Clickable Button</button>     
-
-            <pre><code class="language-html" style="height:50px;">&lt;input type=&quot;submit&quot; value=&quot;form input submit&quot; class=&quot;sc-btn sc-btn-filled&quot; /&gt;
+            <button type="button" class="sc-btn sc-btn-shadow">Clickable Button</button>
+        </div>
+    </div>
+    <pre><code class="language-html" style="height:50px;">&lt;input type=&quot;submit&quot; value=&quot;form input submit&quot; class=&quot;sc-btn sc-btn-filled&quot; /&gt;
 &lt;input type=&quot;button&quot; value=&quot;form input button&quot; class=&quot;sc-btn sc-btn-ghost&quot; /&gt;
 &lt;button type=&quot;button&quot; class=&quot;sc-btn sc-btn-shadow&quot;&gt;Clickable Button&lt;/button&gt;</code></pre>
 
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <div class="sc-form">
             <p>Disabled buttons can be added as a class name (class="sc-btn-disabled"), or with the disabled attribute ("disabled" or "disabled="disabled").</p>
 
             <input type="submit" value="form input submit" class="sc-btn sc-btn-filled sc-btn-disabled" />
             <input type="button" value="form input button" class="sc-btn sc-btn-ghost" disabled />
-            <button type="button" class="sc-btn sc-btn-shadow" disabled="disabled">Clickable Button</button>     
-
-            <pre><code class="language-html" style="height:50px;">&lt;input type=&quot;submit&quot; value=&quot;form input submit&quot; class=&quot;sc-btn sc-btn-filled sc-btn-disabled&quot; /&gt;
-&lt;input type=&quot;button&quot; value=&quot;form input button&quot; class=&quot;sc-btn sc-btn-ghost&quot; disabled /&gt;
-&lt;button type=&quot;button&quot; class=&quot;sc-btn sc-btn-shadow&quot; disabled=&quot;disabled&quot;&gt;Clickable Button&lt;/button&gt;</code></pre>
-
-
-
+            <button type="button" class="sc-btn sc-btn-shadow" disabled="disabled">Clickable Button</button>
         </div>
     </div>
-    
-    
-
-
+            <pre><code class="language-html" style="height:50px;">&lt;input type=&quot;submit&quot; 
+       value=&quot;form input submit&quot; 
+       class=&quot;sc-btn sc-btn-filled sc-btn-disabled&quot; /&gt;
+&lt;input type=&quot;button&quot;
+       value=&quot;form input button&quot; 
+       class=&quot;sc-btn sc-btn-ghost&quot; 
+       disabled /&gt;
+&lt;button type=&quot;button&quot; 
+        class=&quot;sc-btn sc-btn-shadow&quot; 
+        disabled=&quot;disabled&quot;&gt;Clickable Button&lt;/button&gt;</code></pre>
 
 
     <script src="js/prism.js"></script>
