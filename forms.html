@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/buttons.css">
     <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/forms.css">
+    <!--link rel="stylesheet" type="text/css" href="https://localhost:44301/Content/css/components/forms.css"-->
 
     <link href="css/prism.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -27,6 +28,9 @@
             width: 50%;
         }
     </style>
+
+
+
 
     <h3>General form</h3>
     <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
@@ -56,7 +60,50 @@
 &lt;textarea class=&quot;sc-form__textarea&quot; 
           placeholder=&quot;Your question or comment&quot;&gt;&lt;/textarea&gt;</code></pre>
 
+    <h4>No-label inputs</h4>
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <div class="sc-form">
 
+            <p>
+                <span class="sc-form__icon-input">
+                    <input class="sc-form__text" type="text" name="email" placeholder="john@singlecare.com">
+                    <svg class="sc-form__icon sc-form__icon--mail" width="20" height="16">
+                        <rect x="1" y="1" width="18" height="14" />
+                        <polygon points="1,1 1,4, 10,9 19,4 19,1" />
+                    </svg>
+                </span>
+            </p>
+            <p>
+                <span class="sc-form__icon-input">
+                    <input class="sc-form__text" type="password" name="password" placeholder="Your password">
+                    <svg class="sc-form__icon sc-form__icon--password" width="20" height="20">
+                        <rect x="6" y="2" rx="3" ry="3" width="8" height="16" />
+                        <rect x="3" y="9" rx="1" ry="1" width="14" height="9" />
+                    </svg>
+                </span>
+            </p>
+
+        </div>
+    </div>
+    <pre><code class="language-html" style="height:50px;">&lt;span class=&quot;sc-form__icon-input&quot;&gt;
+    &lt;input class=&quot;sc-form__text&quot; type=&quot;text&quot; name=&quot;email&quot; placeholder=&quot;john@singlecare.com&quot;&gt;
+    &lt;svg class=&quot;sc-form__icon sc-form__icon--mail&quot; width=&quot;20&quot; height=&quot;16&quot;&gt;
+        &lt;rect x=&quot;1&quot; y=&quot;1&quot; width=&quot;18&quot; height=&quot;14&quot; /&gt;
+        &lt;polygon points=&quot;1,1 1,4, 10,9 19,4 19,1&quot; /&gt;
+    &lt;/svg&gt;
+&lt;/span&gt;
+
+&lt;span class=&quot;sc-form__icon-input&quot;&gt;
+    &lt;input class=&quot;sc-form__text&quot; type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Your password&quot;&gt;
+    &lt;svg class=&quot;sc-form__icon sc-form__icon--password&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;
+        &lt;rect x=&quot;6&quot; y=&quot;2&quot; rx=&quot;3&quot; ry=&quot;3&quot; width=&quot;8&quot; height=&quot;16&quot; /&gt;
+        &lt;rect x=&quot;3&quot; y=&quot;9&quot; rx=&quot;1&quot; ry=&quot;1&quot; width=&quot;14&quot; height=&quot;9&quot; /&gt;
+    &lt;/svg&gt;
+&lt;/span&gt;</code></pre>
+
+
+
+    <h4>Select dropdowns</h4>
     <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
         <div class="sc-form">
             <!-- Select Menus -->
@@ -69,31 +116,87 @@
         </div>
     </div>
 
-    <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__label&quot;&gt;Select&lt;/label&gt;
-&lt;select class=&quot;sc-form__select&quot;&gt;
-    &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-
     <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
         <div class="sc-form">
             <label class="sc-form__label">Select [disabled]</label>
             <br>
             <select class="sc-form__select" disabled>
-                <option value="">Option 1</option>
-                <option value="">Option 2</option>
-                <option value="">Option 3</option>
+                <option value="">Option A</option>
+                <option value="">Option B</option>
+                <option value="">Option C</option>
             </select>
         </div>
     </div>
-    <pre><code class="language-html" style="height:50px;">&lt;select class=&quot;sc-form__select&quot; disabled&gt;
+
+    <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__label&quot;&gt;Select&lt;/label&gt;
+&lt;select class=&quot;sc-form__select&quot;&gt;
     &lt;option value=&quot;&quot;&gt;Option 1&lt;/option&gt;
     &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
     &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;label class=&quot;sc-form__label&quot;&gt;Select [disabled]&lt;/label&gt;
+&lt;select class=&quot;sc-form__select&quot; disabled&gt;
+    &lt;option value=&quot;&quot;&gt;Option A&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Option B&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Option C&lt;/option&gt;
 &lt;/select&gt;</code></pre>
 
+    <h4>Radio Buttons</h4>
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <!-- Radio Buttons -->
+        <label class="sc-form__radio">
+            <input class="sc-form__radio--input" type="radio" name="choice" value="option1">
+            <span class="sc-form__radio--check"></span>
+            <span class="sc-form__radio--label">Yes</span>
+        </label>
 
+        <label class="sc-form__radio">
+            <input class="sc-form__radio--input" type="radio" name="choice" value="option3">
+            <span class="sc-form__radio--check"></span>
+            <span class="sc-form__radio--label">No</span>
+        </label>
+    </div>
+
+    <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__radio&quot;&gt;
+    &lt;input class=&quot;sc-form__radio--input&quot; type=&quot;radio&quot; name=&quot;choice&quot; value=&quot;yes&quot;&gt;
+    &lt;span class=&quot;sc-form__radio--check&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sc-form__radio--label&quot;&gt;Yes&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;sc-form__radio&quot;&gt;
+    &lt;input class=&quot;sc-form__radio--input&quot; type=&quot;radio&quot; name=&quot;choice&quot; value=&quot;no&quot;&gt;
+    &lt;span class=&quot;sc-form__radio--check&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;sc-form__radio--label&quot;&gt;No&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+
+    <h4>Checkboxes</h4>
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <label class="sc-form__checkbox">
+            <input class="sc-form__checkbox--input" type="checkbox" name="color" value="red">
+            <span class="sc-form__checkbox--check"></span>
+            <span class="sc-form__checkbox--label">Red</span>
+        </label>
+
+        <label class="sc-form__checkbox">
+            <input class="sc-form__checkbox--input" type="checkbox" name="color" value="blue">
+            <span class="sc-form__checkbox--check"></span>
+            <span class="sc-form__checkbox--label">Blue</span>
+        </label>
+    </div>
+    <pre><code class="language-html" style="height:50px;">&lt;label class=&quot;sc-form__checkbox&quot;&gt;
+    &lt;input class=&quot;sc-form__checkbox--input&quot; type=&quot;checkbox&quot; name=&quot;color&quot; value=&quot;red&quot;&gt;
+    &lt;span class=&quot;sc-form__checkbox--check&quot;&gt;&lt;/span&gt;                              
+    &lt;span class=&quot;sc-form__checkbox--label&quot;&gt;Red&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;sc-form__checkbox&quot;&gt;
+    &lt;input class=&quot;sc-form__checkbox--input&quot; type=&quot;season&quot; name=&quot;color&quot; value=&quot;blue&quot;&gt;
+    &lt;span class=&quot;sc-form__checkbox--check&quot;&gt;&lt;/span&gt;                              
+    &lt;span class=&quot;sc-form__checkbox--label&quot;&gt;Blue&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+
+    <h4>Form buttons</h4>
     <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
         <div class="sc-form">
 

@@ -1,0 +1,179 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/buttons.css">
+    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/forms.css">
+
+    <link href="css/prism.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <style>
+    body { 
+        font-family: 'Open Sans', sans-serif;
+        color: #565a5c;
+    }
+    h3 {
+        font: 24px/120% "Open Sans", Helvetica, Arial, sans-serif;
+        font-weight: 300;  
+    }
+    pre {
+        margin-top: 20px!important;
+        margin-bottom: 50px!important; 
+        min-width: 708px;
+        width: 50%;  
+    }
+    </style>
+
+    <h3>FAQ</h3>
+    <div class="sc-bg--gray-lt" style="width:50%; min-width:708px; padding: 15px;">
+
+
+	<style type="text/css">
+	
+		.sc-faq__panel {
+			background: #fff;
+			-webkit-box-shadow: 0 2px 3px 0 rgba(51, 51, 51, 0.2);
+			       -moz-shadow: 0 2px 3px 0 rgba(51, 51, 51, 0.2);
+			        box-shadow: 0 2px 3px 0 rgba(51, 51, 51, 0.2);
+			margin-bottom: 10px;
+		}
+
+		.sc-faq__panel:last-of-type {
+			margin-bottom: 0;
+		}
+
+		.sc-faq__q {
+			box-sizing: border-box;
+			color: #00baf2;
+			cursor: pointer;			
+			display: table;
+			font-size: 16px;
+			font-weight: 300;
+			margin: 0;
+			padding: 15px;
+			width: 100%;
+		} 
+
+
+		.sc-faq__q span {
+			display: table-cell;
+		}
+
+		.sc-faq__a {
+			display: none;
+			font-size: 16px;
+			margin: 0;
+			padding: 0 15px 15px;
+		}
+
+		.sc-faq__a p {
+			margin:15px 0;
+		}
+
+		.sc-faq__a p:first-child {
+			margin-top:0;
+		}
+
+		.sc-faq__a p:last-child {
+			margin-bottom:0;
+
+		}
+
+		.sc-faq__q .sc-faq__arrow {
+			background: url(http://singlecare.com/Content/Images/arrows/arrow-dropdown.svg) top right no-repeat;
+			background-size: 11px 7px;
+			display: inline-block;
+			float: right;
+			height: 7px;
+			width: 11px;
+			margin-top: 9px;
+			text-align:right;
+			vertical-align: top;
+		}
+
+		.sc-faq__arrow.sq-faq__arrow-up {
+			-moz-transform: rotate(180deg);
+			-webkit-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+	</style>
+
+	<section class="sc-faq">
+		<article class="sc-faq__panel">
+			<h5 class="sc-faq__q"><span>What is Lorem Ipsum?</span> <span class="sc-faq__arrow"></span></h5>
+			<div class="sc-faq__a">
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			</div>
+		</article>
+		<article class="sc-faq__panel">
+			<h5 class="sc-faq__q"><span>Question 2</span> <span class="sc-faq__arrow"></span></h5>
+			<div class="sc-faq__a">
+				<p>This is the answer to the second question.</p>
+				<p>Here is another paragraph in the answer to the second question.</p>
+			</div>
+		</article>
+	</section>
+
+
+
+</div>
+
+    <pre><code class="language-html" style="height:50px;">&lt;section class=&quot;sc-faq&quot;&gt;
+	&lt;article class=&quot;sc-faq__panel&quot;&gt;
+		&lt;h5 class=&quot;sc-faq__q&quot;&gt;&lt;span&gt;What is Lorem Ipsum?&lt;/span&gt; &lt;span class=&quot;sc-faq__arrow&quot;&gt;&lt;/span&gt;&lt;/h5&gt;
+		&lt;div class=&quot;sc-faq__a&quot;&gt;
+			&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/article&gt;
+	&lt;article class=&quot;sc-faq__panel&quot;&gt;
+		&lt;h5 class=&quot;sc-faq__q&quot;&gt;&lt;span&gt;Question 2&lt;/span&gt; &lt;span class=&quot;sc-faq__arrow&quot;&gt;&lt;/span&gt;&lt;/h5&gt;
+		&lt;div class=&quot;sc-faq__a&quot;&gt;
+			&lt;p&gt;This is the answer to the second question.&lt;/p&gt;
+			&lt;p&gt;Here is another paragraph in the answer to the second question.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+
+    <br><br>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		var toggleFAQ = function(){
+
+			$('.sc-faq__panel').each(function(){
+				var question = $(this).find('.sc-faq__q'),
+					answer = $(this).find('.sc-faq__a'),
+					arrow = $(this).find('.sc-faq__arrow'),
+					arrowUpClass = 'sq-faq__arrow-up';
+
+				question.on('click',function(){
+					$(this).toggleClass('answer-show');
+					if ( $(this).hasClass('answer-show') ) {
+						answer.slideDown();
+						arrow.addClass(arrowUpClass);
+					}
+					else {
+						answer.slideUp();
+						arrow.removeClass(arrowUpClass);
+					}
+				});
+			});
+
+		} // toggleFAQ
+
+
+		$(document).ready(function(){
+			toggleFAQ();
+		});
+	</script>
+
+
+
+
+
+    <script src="js/prism.js"></script>
+
+</body>
+</html>
