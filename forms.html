@@ -1,9 +1,13 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/buttons.css">
-    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/forms.css">
-    <!--link rel="stylesheet" type="text/css" href="https://localhost:44301/Content/css/components/forms.css"-->
 
+    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/buttons.css">
+    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/forms.css">    
+    <!--
+    <link rel="stylesheet" type="text/css" href="https://localhost:44301/Content/css/components/buttons.css">
+    <link rel="stylesheet" type="text/css" href="https://localhost:44301/Content/css/components/forms.css">
+
+    -->
     <link href="css/prism.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 </head>
@@ -14,6 +18,7 @@
         body {
             font-family: 'Open Sans', sans-serif;
             color: #565a5c;
+            line-height: 120%;
         }
 
         h3 {
@@ -63,45 +68,23 @@
     <h4>No-label inputs</h4>
     <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
         <div class="sc-form">
-
-            <p>
-                <span class="sc-form__icon-input">
-                    <input class="sc-form__text" type="text" name="email" placeholder="john@singlecare.com">
-                    <svg class="sc-form__icon sc-form__icon--mail" width="20" height="16">
-                        <rect x="1" y="1" width="18" height="14" />
-                        <polygon points="1,1 1,4, 10,9 19,4 19,1" />
-                    </svg>
-                </span>
-            </p>
-            <p>
-                <span class="sc-form__icon-input">
-                    <input class="sc-form__text" type="password" name="password" placeholder="Your password">
-                    <svg class="sc-form__icon sc-form__icon--password" width="20" height="20">
-                        <rect x="6" y="2" rx="3" ry="3" width="8" height="16" />
-                        <rect x="3" y="9" rx="1" ry="1" width="14" height="9" />
-                    </svg>
-                </span>
-            </p>
-
+            <input class="sc-form__text sc-form__icon-text sc-form__icon--mail" type="text" name="email" placeholder="john@singlecare.com">
         </div>
     </div>
-    <pre><code class="language-html" style="height:50px;">&lt;span class=&quot;sc-form__icon-input&quot;&gt;
-    &lt;input class=&quot;sc-form__text&quot; type=&quot;text&quot; name=&quot;email&quot; placeholder=&quot;john@singlecare.com&quot;&gt;
-    &lt;svg class=&quot;sc-form__icon sc-form__icon--mail&quot; width=&quot;20&quot; height=&quot;16&quot;&gt;
-        &lt;rect x=&quot;1&quot; y=&quot;1&quot; width=&quot;18&quot; height=&quot;14&quot; /&gt;
-        &lt;polygon points=&quot;1,1 1,4, 10,9 19,4 19,1&quot; /&gt;
-    &lt;/svg&gt;
-&lt;/span&gt;
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
+        <div class="sc-form">
+            <input class="sc-form__text sc-form__icon-text sc-form__icon--password" type="password" name="password" placeholder="my password">
+        </div>
+    </div>
+    <pre><code class="language-html" style="height:50px;">&lt;input class=&quot;sc-form__text sc-form__icon-text sc-form__icon--mail&quot;
+       type=&quot;text&quot;
+       name=&quot;email&quot;
+       placeholder=&quot;john@singlecare.com&quot;&gt;
 
-&lt;span class=&quot;sc-form__icon-input&quot;&gt;
-    &lt;input class=&quot;sc-form__text&quot; type=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;Your password&quot;&gt;
-    &lt;svg class=&quot;sc-form__icon sc-form__icon--password&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;
-        &lt;rect x=&quot;6&quot; y=&quot;2&quot; rx=&quot;3&quot; ry=&quot;3&quot; width=&quot;8&quot; height=&quot;16&quot; /&gt;
-        &lt;rect x=&quot;3&quot; y=&quot;9&quot; rx=&quot;1&quot; ry=&quot;1&quot; width=&quot;14&quot; height=&quot;9&quot; /&gt;
-    &lt;/svg&gt;
-&lt;/span&gt;</code></pre>
-
-
+&lt;input class=&quot;sc-form__text sc-form__icon-text sc-form__icon--password&quot;
+       type=&quot;password&quot;
+       name=&quot;password&quot;
+       placeholder=&quot;my password&quot;&gt;</code></pre>
 
     <h4>Select dropdowns</h4>
     <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px;">
@@ -229,7 +212,6 @@
 &lt;button type=&quot;button&quot; 
         class=&quot;sc-btn sc-btn-shadow&quot; 
         disabled=&quot;disabled&quot;&gt;Clickable Button&lt;/button&gt;</code></pre>
-
 
     <script src="js/prism.js"></script>
 </body>

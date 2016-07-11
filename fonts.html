@@ -15,6 +15,7 @@
     body { 
         font-family: 'Open Sans', sans-serif;
         color: #565a5c;
+        line-height: 120%;
     }
     pre {
         margin-top: 20px!important;
@@ -22,15 +23,61 @@
         min-width: 708px;
         width: 760px;  
     }
-    
+
+    .font-table {border-collapse: collapse; width:760px;}
+    .font-table tr {border-bottom: 1px solid #ccc;}
+    .font-table th {font-size: 12px; text-align: left; text-transform: uppercase;}
+    .font-table td {width: 200px; padding:10px 0;}
+    .font-table h1, 
+    .font-table h2, 
+    .font-table h3, 
+    .font-table h4 {margin:0; padding:0;}
+
+    @media screen and (max-width: 767px){
+        .font-table {width: 100%;}
+        .font-table thead {display: none;}
+        .font-table td {display: block; padding:0;}
+        .font-table .sample {padding: 10px 0 5px;}
+        .font-table .desktop {font-size: 14px; }
+        .font-table .desktop:before {content: 'Desktop: '; font-weight: bold;}
+        .font-table .mobile {font-size: 14px; padding-bottom:10px;}
+        .font-table .mobile:before {content: 'Mobile: '; font-weight: bold;}
+    }
+
     </style>
 
+    <table class="font-table">
+        <thead>
+            <tr>
+                <th class="sample"></th>
+                <th class="desktop">Desktop</th>
+                <th class="mobile">Mobile</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="sample"><h1>Header 1</h1></td>
+                <td class="desktop">36px</td>
+                <td class="mobile">28px</td>
+            </tr>
+            <tr>
+                <td class="sample"><h2>Header 2</h2></td>
+                <td class="desktop">28px</td>
+                <td class="mobile">22px</td>
+            </tr>
+            <tr>
+                <td class="sample"><h3>Header 3</h3></td>
+                <td class="desktop">22px</td>
+                <td class="mobile">18px</td>
+            </tr>
+            <tr>
+                <td class="sample"><h4>Header 4</h4></td>
+                <td class="desktop">12px</td>
+                <td class="mobile">12px</td>
+            </tr>        
+        </tbody>
+    </table>
 
-
-    <h1>Header 1</h1>
-    <h2>Header 2</h2>
-    <h3>Header 3</h3>
-    <h4>Header 4</h4>
     <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
