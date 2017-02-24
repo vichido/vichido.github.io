@@ -1,88 +1,116 @@
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/buttons.css">
-   
-    <!--
-    <link rel="stylesheet" type="text/css" href="https://localhost:44301/Content/css/components/buttons.css">
- -->
-    <link href="css/prism.css" rel="stylesheet" />
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-</head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://qa.singlecare.com/Content/css/global.css' rel='stylesheet' type='text/css'>
 
-<body>
+<style>
+	section {
+		margin: 0 auto 30px;
+		width: 100%;
+		max-width: 708px;
+	}
 
-    <style>
-    body { 
-        font-family: 'Open Sans', sans-serif;
-        color: #565a5c;
-        line-height: 120%;
-    }
-    h3 {
-        font: 24px/120% "Open Sans", Helvetica, Arial, sans-serif;
-        font-weight: 300;   
-    }
-    pre {
-        margin-top: 20px!important;
-        margin-bottom: 50px!important; 
-        min-width: 708px;
-        width: 50%;  
-    }
-    </style>
+	section h3, section p {
+		padding: 5px 15px;
+	}
+	section div {
+		background: #eee;
+		padding: 15px;
+	}
+	section code {
+		background: transparent;
+	}
+</style>
 
-
+<section>
+	<h3>Global button sizes</h3>
+	<div>
+		<a href="#" class="sc-btn sc-btn-filled sc-btn--size-sm">small</a>
+		<a href="#" class="sc-btn sc-btn-filled sc-btn--size-md">medium [default]</a>
+		<a href="#" class="sc-btn sc-btn-filled sc-btn--size-lg">large</a>
+	</div>
+</section>
 
 
-    <h3>Filled button</h3>
-    <p>
-        <a href="#" class="sc-btn sc-btn-filled sc-btn--size-lg">large filled button</a>
-        <a href="#" class="sc-btn sc-btn-filled">default filled button</a>
-        <a href="#" class="sc-btn sc-btn-filled sc-btn--size-sm">small filled button</a>
+<section>
+	<h3>Filled buttons</h3>
+	<div>
+		<a href="#" class="sc-btn sc-btn-filled">link</a>
+		<input type="button" class="sc-btn sc-btn-filled" value="input" />
+		<button class="sc-btn sc-btn-filled">button</button>
 
-        <pre><code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-filled sc-btn--size-lg&quot;&gt;large filled button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-filled &quot;&gt;default filled button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-filled sc-btn--size-sm&quot;&gt;small filled button&lt;/a&gt</code></pre>
-    </p>
-        
-    <h3>Ghost button</h3>
-    <p>
-        <a href="#" class="sc-btn sc-btn-ghost">ghost button</a>
-        <pre><code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-ghost&quot;&gt;ghost button&lt;/a&gt;</code></pre>
-    </p>
+		<a href="#" class="sc-btn sc-btn-filled sc-bg--blue-lt">var: blue-lt</a>
+		<a href="#" class="sc-btn sc-btn-filled sc-bg--green-lt">var: green-lt</a>
+		<a href="#" class="sc-btn sc-btn-filled sc-bg--pink">var: pink</a>	
+	</div>
+</section>
 
-    <h3>Knockout button</h3>
-    <p>
-        <div style="padding:15px;background:#aaa;min-width:708px;width:50%">
-            <a href="#" class="sc-btn sc-btn-knockout">knockout button</a>
-        </div>
-        <pre><code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-knockout&quot;&gt;ghost button&lt;/a&gt;</code></pre>
-    </p>
+<section>
+	<h3>Ghost buttons</h3>
+	<div style="background:#f9f9f9;">
+		<a href="#" class="sc-btn sc-btn-ghost">link</a>
+		<input type="button" class="sc-btn sc-btn-ghost" value="input" />
+		<button class="sc-btn sc-btn-ghost">button</button>
 
-    <h3>Shadowed button</h3>
-    <p>
-        <a href="#" class="sc-btn sc-btn-shadow">knockout button</a>
-        <pre><code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-shadow&quot;&gt;shadowed button&lt;/a&gt;</code></pre>
-    </p>
+		<a href="#" class="sc-btn sc-btn-ghost ghost-cyan">var: cyan</a>
+		<a href="#" class="sc-btn sc-btn-ghost ghost-green">var: green</a>
+	</div>
+	<div style="background:#565a5c;">
+		<a href="#" class="sc-btn sc-btn-ghost ghost-white">var: white</a>
+	</div>
+</section>
 
-    <h3>Disabled buttons</h3>
-    <p>
-        <a href="#" class="sc-btn sc-btn-filled sc-btn-disabled">filled button</a>
-        <a href="#" class="sc-btn sc-btn-ghost sc-btn-disabled">ghost button</a>
-        <a href="#" class="sc-btn sc-btn-shadow sc-btn-disabled">shadowed button</a>
+<section>
+	<h3>Knockout buttons</h3>
+	<div style="background:#aaa;">
+		<a href="#" class="sc-btn sc-btn-knockout">link</a>
+		<input type="button" class="sc-btn sc-btn-knockout" value="input" />
+		<button class="sc-btn sc-btn-knockout">button</button>
 
-        <pre><code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-filled sc-btn-disabled&quot;&gt;filled button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-ghost sc-btn-disabled&quot;&gt;ghost button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-shadow sc-btn-disabled&quot;&gt;shadowed button&lt;/a&gt;</code></pre>
+		<a href="#" class="sc-btn sc-btn-knockout knockout-black">var: black</a>
+	</div>
+</section>
 
-        <div style="padding:15px;background:#565a5c;min-width:708px;width:50%">
-            <a href="#" class="sc-btn sc-btn-knockout sc-btn-disabled">knockout button</a>
-            <a href="#" class="sc-btn sc-btn-ghost ghost-white sc-btn-disabled">ghost white button</a>
-        </div>
+<section>
+	<h3>Shadowed buttons</h3>
+	<p>Does not work with <code>&lt;input&gt;</code> (pseudo <code>:before</code> &amp; <code>:after</code> don't work on <code>&lt;input&gt;</code> elements).</p>
+	<div>
+		<a href="#" class="sc-btn sc-btn-shadow">link</a>
+		<button class="sc-btn sc-btn-shadow">button</button>
 
-        <pre><code class="language-html" style="height:50px;">&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-knockout sc-btn-disabled&quot;&gt;knockout button&lt;/a&gt;
-&lt;a href=&quot;#&quot; class=&quot;sc-btn sc-btn-ghost ghost-white sc-btn-disabled&quot;&gt;ghost white button&lt;/a&gt;</code></pre>
-    </p>
+		<a href="#" class="sc-btn sc-btn-shadow sc-bg--pink">var: pink</a>
+		<a href="#" class="sc-btn sc-btn-shadow sc-bg--gray">var: gray</a>
+	</div>
+	<div>
+		<a href="#" class="sc-btn sc-btn-shadow sc-bg--white">var: white</a>
+		<a href="#" class="sc-btn sc-btn-shadow sc-bg--white sc-txt--black">var: black text</a>
+	</div>
+</section>
 
-    <script src="js/prism.js"></script>
-</body>
+<section>
+	<h3>Disabled buttons</h3>
+	<div style="background:#f9f9f9;">
+		<a href="#" class="sc-btn sc-btn-filled sc-btn-disabled">link</a>
+		<input type="button" class="sc-btn sc-btn-filled" value="input" disabled="disabled" />
+		<button class="sc-btn sc-btn-filled sc-btn-disabled">button</button>
 
-</html>
+		<a href="#" class="sc-btn sc-btn-ghost sc-btn-disabled">var: ghost</a>
+	</div>
+	<div style="background:#aaa;">
+		<a href="#" class="sc-btn sc-btn-shadow sc-btn-disabled">var: shadow</a>
+		<a href="#" class="sc-btn sc-btn-knockout sc-btn-disabled">var: knockout</a>
+	</div>
+	<div style="background:#565a5c;">
+		<a href="#" class="sc-btn sc-btn-ghost ghost-white sc-btn-disabled">var: ghost white</a>
+	</div>
+</section>
+
+<section>
+	<h3>Text links (for <code>&lt;input&gt;</code> and <code>&lt;button&gt;</code>) </h3>
+
+	<div>
+		<input type="button" class="sc-btn sc-btn-link" value="input" />
+		<button class="sc-btn sc-btn-link">button</button>
+
+		<input type="button" class="sc-btn sc-btn-link sc-txt--gray" value="var: gray" />
+		<button class="sc-btn sc-btn-link sc-txt--black">var: black</button>	
+	</div>
+</section>

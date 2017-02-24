@@ -1,0 +1,442 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/buttons.css">
+    <link rel="stylesheet" type="text/css" href="https://qa.singlecare.com/Content/css/components/forms.css">
+
+    <link href="css/prism.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <style>
+    body { 
+        font-family: 'Open Sans', sans-serif;
+        color: #565a5c;
+        line-height: 120%;
+    }
+    h3 {
+        font: 24px/120% "Open Sans", Helvetica, Arial, sans-serif;
+        font-weight: 300;   
+    }
+    pre {
+        margin-top: 20px!important;
+        margin-bottom: 50px!important; 
+        min-width: 708px;
+        width: 80%;  
+    }
+
+    /* To show location of example links in this page */
+    .sc-tip-link {
+        border-bottom: 1px dotted #565a5c;
+    }
+    #tooltip-example-2 .sc-tip-link {
+        border-bottom: none
+    }
+
+    </style>
+
+    <style>
+
+        .sc-tip {
+            display: inline;
+            position: relative;
+            text-align: left;
+        }
+        .sc-tip-bullet,
+        .sc-tip-bullet--filled {
+            display: inline-block;
+            border-radius: 100%;
+            box-sizing: border-box;
+            margin-left: 7px;
+            width: 7px;
+            height: 7px;
+        }
+        .sc-tip-bullet {
+            border: 1px solid #fff;
+        }
+        .sc-tip-bullet--filled {
+            background: #fff;
+        }
+        .sc-tip-bullet:first-of-type,
+        .sc-tip-bullet--filled:first-of-type {
+            margin-left: 0;
+        }
+
+        .sc-tip-close {
+            background:url('https://singlecare.com/Content/Images/icons/icon-close-white.svg') center center no-repeat;
+            background-size: 10px 10px;
+            cursor: pointer;
+            display:block;
+            height:10px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width:10px;
+        }
+        .sc-bg--white .sc-tip-close {
+            background-image:url('https://singlecare.com/Content/Images/icons/icon-close-dark.svg');
+        }
+
+        .sc-tip-content {
+            display: block;
+            box-sizing: border-box;
+            -webkit-filter: drop-shadow(0 1px 3px rgba(170, 170, 170, 0.5));
+            -moz-filter: drop-shadow(0 1px 3px rgba(170, 170, 170, 0.5));
+            filter: drop-shadow(0 1px 3px rgba(170, 170, 170, 0.5));
+            opacity: 0;
+            padding: 15px;
+            position: absolute;
+            -webkit-transition: opacity .5s;
+            -moz-transition: opacity .5s;
+            transition: opacity .5s;
+            width: 228px;
+            z-index: -1;
+        }
+        .sc-tip-content-show {
+            opacity: 1;
+            z-index: 100;
+        }
+
+        .sc-tip-cta {
+            display: table-cell;
+            text-align: right;
+        }
+        .sc-tip-cta a {
+            cursor: pointer;
+        }
+
+        .sc-tip-desc {
+            display: block;
+            font-size: 15px;
+        }
+
+        .sc-tip-footer {
+            display: table;
+            margin-top: 10px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        .sc-tip-link {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+        .sc-tip-link.active {
+            z-index: 101;
+        }
+
+        .sc-tip-progress {
+            display: table-cell;
+        }
+
+        .sc-tip-title {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 1.25;
+            margin: 0 10px 3px 0;
+            text-transform: uppercase; 
+        }
+
+
+        /* Positioning */
+        .sc-tip__pos--bottom-left {
+            left: 0;
+            top: 100%;
+        }
+        .sc-tip__pos--bottom-right {
+            right: 0;
+            top: 100%;
+        }
+        .sc-tip__pos--top-left {
+            bottom: 100%;
+            left: 0;
+        }
+        .sc-tip__pos--top-right {
+            bottom: 100%;
+            right: 0;
+        }
+
+        /* Arrows */
+        .sc-tip__arrow--bottom-right,
+        .sc-tip__arrow--bottom-left {
+            margin-bottom: 15px;
+        }
+        .sc-tip__arrow--bottom-left:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border: 15px solid transparent;
+        }
+        .sc-tip__arrow--bottom-right:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            right: 0;
+            border: 15px solid transparent;
+        }
+        .sc-bg--cyan.sc-tip__arrow--bottom-right:after,
+        .sc-bg--cyan.sc-tip__arrow--bottom-left:after {
+            border-top-color: #00baf2;
+        }
+        .sc-bg--white.sc-tip__arrow--bottom-right:after,
+        .sc-bg--white.sc-tip__arrow--bottom-left:after {
+            border-top-color: #fff;
+        }
+        .sc-tip__arrow--top-right,
+        .sc-tip__arrow--top-left {
+            margin-top: 15px;
+        }
+        .sc-tip__arrow--top-left:after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            border: 15px solid transparent;
+        }
+        .sc-tip__arrow--top-right:after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            border: 15px solid transparent;
+        }
+        .sc-bg--cyan.sc-tip__arrow--top-right:after,
+        .sc-bg--cyan.sc-tip__arrow--top-left:after {
+            border-bottom-color: #00baf2;
+        }
+        .sc-bg--white.sc-tip__arrow--top-right:after,
+        .sc-bg--white.sc-tip__arrow--top-left:after {
+            border-bottom-color: #fff;
+        }
+
+    </style>
+
+    <h3>Tooltips</h3>
+
+    <div class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px 100px; box-sizing:border-box;">
+
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
+            <span class="sc-tip" data-tooltip-id="example1">
+                <span class="sc-tip-link">distribution</span>
+                <span id="example1" class="sc-tip-content sc-tip__pos--bottom-right sc-tip__arrow--top-right sc-bg--cyan sc-txt--white">
+                    <span class="sc-tip-close"></span>
+                    <span class="sc-tip-title">Step 1: Menu</span>
+                    <span class="sc-tip-desc">View your card, edit your account information, and earn credit toward future visits.</span>
+                    <span class="sc-tip-footer">
+                        <span class="sc-tip-progress">
+                            <b class="sc-tip-bullet--filled"></b>
+                            <b class="sc-tip-bullet"></b>
+                            <b class="sc-tip-bullet"></b>
+                            <b class="sc-tip-bullet"></b>
+                        </span>
+                        <span class="sc-tip-cta"><a class="sc-btn sc-btn-knockout sc-btn--size-sm" onclick="openTooltip('example2')">Next</a></span>
+                    </span>
+                </span>
+                <!-- End: tooltip-wrapper -->
+            </span>
+            <!-- End: tooltip-link -->
+
+            of letters, as opposed to using 
+            <span class="sc-tip" data-tooltip-id="example2">
+                <span class="sc-tip-link">Lorem Ipsum</span>
+                <span id="example2" class="sc-tip-content sc-tip__pos--bottom-left sc-tip__arrow--top-left sc-bg--cyan sc-txt--white">
+                    <span class="sc-tip-close"></span>
+                    <span class="sc-tip-title">Step 2: Search</span>
+                    <span class="sc-tip-desc">Search by specialty or by provider's name. You can also search by symptom to find the specialist that's right for you.</span>
+                    <span class="sc-tip-footer">
+                        <span class="sc-tip-progress">
+                            <b class="sc-tip-bullet--filled"></b>
+                            <b class="sc-tip-bullet--filled"></b>
+                            <b class="sc-tip-bullet"></b>
+                            <b class="sc-tip-bullet"></b>
+                        </span>
+                        <span class="sc-tip-cta"><a class="sc-btn sc-btn-knockout sc-btn--size-sm" onclick="openTooltip('example3')">Next</a></span>
+                    </span>
+                </span>
+                <!-- End: tooltip-wrapper -->
+            </span>     
+            <!-- End: tooltip-link -->
+        making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        </p>
+
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                <span class="sc-tip" data-tooltip-id="example3">
+                    <span class="sc-tip-link">Lorem Ipsum</span>
+                    <span id="example3" class="sc-tip-content sc-tip__pos--top-left sc-tip__arrow--bottom-left sc-bg--cyan sc-txt--white">
+                        <span class="sc-tip-close"></span>
+                        <span class="sc-tip-title">Step 3: My Medical Team</span>
+                        <span class="sc-tip-desc">Save your favorite doctors, add new specialties, etc.</span>
+                        <span class="sc-tip-footer">
+                            <span class="sc-tip-progress">
+                                <b class="sc-tip-bullet--filled"></b>
+                                <b class="sc-tip-bullet--filled"></b>
+                                <b class="sc-tip-bullet--filled"></b>
+                                <b class="sc-tip-bullet"></b>
+                            </span>
+                            <span class="sc-tip-cta"><a class="sc-btn sc-btn-knockout sc-btn--size-sm" onclick="openTooltip('example4')">Next</a></span>
+                        </span>
+                    </span>
+                    <!-- End: tooltip-wrapper -->
+                </span>     
+                <!-- End: tooltip-link -->
+            passages, and more recently with desktop publishing software like 
+                <span class="sc-tip" data-tooltip-id="example4">
+                    <span class="sc-tip-link">Aldus PageMaker</span>
+                    <span id="example4" class="sc-tip-content sc-tip__pos--top-right sc-tip__arrow--bottom-right sc-bg--cyan sc-txt--white">
+                        <span class="sc-tip-close"></span>
+                        <span class="sc-tip-title">Step 4: Profile Setup</span>
+                        <span class="sc-tip-desc">Members have access to great benefits on services beyond traditional doctor visits.</span>
+                        <span class="sc-tip-footer">
+                            <span class="sc-tip-progress">
+                                <b class="sc-tip-bullet--filled"></b>
+                                <b class="sc-tip-bullet--filled"></b>
+                                <b class="sc-tip-bullet--filled"></b>
+                                <b class="sc-tip-bullet--filled"></b>
+                            </span>
+                            <span class="sc-tip-cta"><a class="sc-btn sc-btn-knockout sc-btn--size-sm" onclick="closeTooltip('example4')">Done</a></span>
+                        </span>
+                    </span>
+                    <!-- End: tooltip-wrapper -->
+                </span>     
+                <!-- End: tooltip-link -->
+            including versions of Lorem Ipsum.
+        </p>
+    </div>
+
+
+<pre><code class="language-html" style="height:50px;">&lt;!-- Step 1 (with NEXT button that triggers next tooltip) --&gt;
+&lt;span class=&quot;sc-tip&quot; data-tooltip-id=&quot;example1&quot;&gt;
+    &lt;span class=&quot;sc-tip-link&quot;&gt;distribution&lt;/span&gt;
+    &lt;span id=&quot;example1&quot; class=&quot;sc-tip-content sc-tip__pos--bottom-right sc-tip__arrow--top-right sc-bg--cyan sc-txt--white&quot;&gt;
+        &lt;span class=&quot;sc-tip-close&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-title&quot;&gt;Step 1: Menu&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-desc&quot;&gt;View your card, edit your account information, and earn credit toward future visits.&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-footer&quot;&gt;
+            &lt;span class=&quot;sc-tip-progress&quot;&gt;
+                &lt;b class=&quot;sc-tip-bullet--filled&quot;&gt;&lt;/b&gt;
+                &lt;b class=&quot;sc-tip-bullet&quot;&gt;&lt;/b&gt;
+                &lt;b class=&quot;sc-tip-bullet&quot;&gt;&lt;/b&gt;
+                &lt;b class=&quot;sc-tip-bullet&quot;&gt;&lt;/b&gt;
+            &lt;/span&gt;
+            &lt;span class=&quot;sc-tip-cta&quot;&gt;&lt;a class=&quot;sc-btn sc-btn-knockout sc-btn--size-sm&quot; onclick=&quot;openTooltip(&#39;example2&#39;)&quot;&gt;Next&lt;/a&gt;&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/span&gt;
+    &lt;!-- End: tooltip-wrapper --&gt;
+&lt;/span&gt;
+&lt;!-- End: tooltip-link --&gt;
+
+
+
+&lt;!-- Last Step (with filled progress bar and DONE button) --&gt;
+&lt;span class=&quot;sc-tip&quot; data-tooltip-id=&quot;example4&quot;&gt;
+    &lt;span class=&quot;sc-tip-link&quot;&gt;Aldus PageMaker&lt;/span&gt;
+    &lt;span id=&quot;example4&quot; class=&quot;sc-tip-content sc-tip__pos--top-right sc-tip__arrow--bottom-right sc-bg--cyan sc-txt--white&quot;&gt;
+        &lt;span class=&quot;sc-tip-close&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-title&quot;&gt;Step 4: Profile Setup&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-desc&quot;&gt;Members have access to great benefits on services beyond traditional doctor visits.&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-footer&quot;&gt;
+            &lt;span class=&quot;sc-tip-progress&quot;&gt;
+                &lt;b class=&quot;sc-tip-bullet--filled&quot;&gt;&lt;/b&gt;
+                &lt;b class=&quot;sc-tip-bullet--filled&quot;&gt;&lt;/b&gt;
+                &lt;b class=&quot;sc-tip-bullet--filled&quot;&gt;&lt;/b&gt;
+                &lt;b class=&quot;sc-tip-bullet--filled&quot;&gt;&lt;/b&gt;
+            &lt;/span&gt;
+            &lt;span class=&quot;sc-tip-cta&quot;&gt;&lt;a class=&quot;sc-btn sc-btn-knockout sc-btn--size-sm&quot; onclick=&quot;closeTooltip(&#39;example4&#39;)&quot;&gt;Done&lt;/a&gt;&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/span&gt;
+    &lt;!-- End: tooltip-wrapper --&gt;
+&lt;/span&gt;     
+&lt;!-- End: tooltip-link --&gt;</code></pre>
+
+    <br><br>
+
+    <h3>Example 2</h3>
+    <p>White tooltip, no progress bar and has a text link CTA):</p>
+
+    <div id="tooltip-example-2" class="sc-bg--gray-lt" style="min-width:708px;width:50%;padding: 15px 100px; box-sizing:border-box; text-align:center;">
+        <!-- Begin: tooltip-link -->   
+        <span class="sc-tip" data-tooltip-id="promo-tooltip">
+            <span class="sc-tip-link">Click me</span>
+            <span id="promo-tooltip" class="sc-tip-content sc-tip__pos--top-right sc-tip__arrow--bottom-right sc-bg--white sc-txt--black">
+                <span class="sc-tip-close"></span>
+                <span class="sc-tip-title">Have a promotional code from a mailer?</span>
+                <span class="sc-tip-desc">Enter it here to apply to your next appointment.</span>
+                <span class="sc-tip-footer">
+                    <span class="sc-tip-cta"><a class="sc-tip-txt-link sc-txt--cyan" onclick="closeTooltip('promo-tooltip')">Got it</a></span>
+                </span>
+            </span>
+            <!-- End: tooltip-wrapper -->
+        </span>     
+        <!-- End: tooltip-link -->                                
+    </div>
+
+<pre><code class="language-html" style="height:50px;">&lt;!-- Begin: tooltip-link --&gt;   
+&lt;span class=&quot;sc-tip&quot; data-tooltip-id=&quot;promo-tooltip&quot;&gt;
+    &lt;span class=&quot;sc-tip-link&quot;&gt;Click me&lt;/span&gt;
+    &lt;span id=&quot;promo-tooltip&quot; class=&quot;sc-tip-content sc-tip__pos--top-right sc-tip__arrow--bottom-right sc-bg--white sc-txt--black&quot;&gt;
+        &lt;span class=&quot;sc-tip-close&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-title&quot;&gt;Have a promotional code from a mailer?&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-desc&quot;&gt;Enter it here to apply to your next appointment.&lt;/span&gt;
+        &lt;span class=&quot;sc-tip-footer&quot;&gt;
+            &lt;span class=&quot;sc-tip-cta&quot;&gt;&lt;a class=&quot;sc-tip-txt-link sc-txt--cyan&quot; onclick=&quot;closeTooltip(&#39;promo-tooltip&#39;)&quot;&gt;Got it&lt;/a&gt;&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/span&gt;
+    &lt;!-- End: tooltip-wrapper --&gt;
+&lt;/span&gt;     
+&lt;!-- End: tooltip-link --&gt;</code></pre>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+        function initTooltips(){
+            if ( $('.sc-tip').length == 0 ) return;
+
+            $('.sc-tip').each(function(){
+                var tooltipID = $(this).attr('data-tooltip-id'),
+                    tooltipLink = $(this).find('.sc-tip-link'),
+                    tooltipClose = $(this).find('.sc-tip-close');
+
+                tooltipLink.bind('click',function(){
+                    $('#'+tooltipID).addClass('sc-tip-content-show');
+                    $(this).addClass('active');
+                });
+            
+                tooltipClose.bind('click',function(){
+                    $('#'+tooltipID).removeClass('sc-tip-content-show');
+                    tooltipLink.removeClass('active');
+                });
+
+            });     
+        }
+
+        function closeTooltip(tipID){
+            $('#'+tipID).removeClass('sc-tip-content-show');
+            $('#'+tipID).find('.sc-tip-link').removeClass('active');
+        }
+
+        function openTooltip(tipID){
+            // close all tooltips
+            $('.sc-tip-content').removeClass('sc-tip-content-show');
+            $('.sc-tip-link').removeClass('active');
+
+            // open selected tip
+            $('#'+tipID).addClass('sc-tip-content-show');
+            $('#'+tipID).find('.sc-tip-link').addClass('active');
+        }
+
+
+        $(document).ready(function(){
+            initTooltips();
+
+        });
+    </script>
+
+    <script src="js/prism.js"></script>
+</body>
+</html>
